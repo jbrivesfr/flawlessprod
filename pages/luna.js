@@ -22,9 +22,9 @@ export default function Luna() {
   return (
     <Layout
       title="Luna - Virtual Assistant & Executive Support | Flawless Productions"
-      description="Professional virtual assistant for scheduling, coordination, and daily management. Calendar management, task tracking, email support. From $500/month."
-      ogTitle="Luna - Virtual Assistant & Executive Support"
-      ogDescription="Your personal assistant for calendar management, task coordination, and executive support. Proactive check-ins, 8 AM - 8 PM availability. $500 first month."
+      description="Virtual Assistant & Executive Support That Actually Keeps Up. Luna handles the chaos so you can focus on the work that matters."
+      ogTitle="Luna - Virtual Assistant & Executive Support That Actually Keeps Up"
+      ogDescription="Virtual Assistant & Executive Support That Actually Keeps Up. Luna handles the chaos so you can focus on the work that matters."
       ogImage="https://flawlessprod.com/images/luna-og.jpg"
       schema={schema}
       canonicalUrl="https://flawlessprod.com/luna"
@@ -34,9 +34,9 @@ export default function Luna() {
         <div className="container grid-2" style={{ alignItems: 'center' }}>
           <div>
             <h1 style={{ color: '#1565c0', marginBottom: '1rem' }}>Luna</h1>
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Virtual Assistant & Executive Support</h2>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Virtual Assistant & Executive Support That Actually Keeps Up</h2>
             <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
-              Your personal assistant for scheduling, coordination, and daily management.
+              You're drowning in emails, double-booking meetings, and forgetting deadlines. Luna handles the chaos so you can focus on the work that matters.
             </p>
             <Link href="#pricing" className="btn btn-lg" style={{ backgroundColor: '#1565c0' }}>
               View Pricing
@@ -54,6 +54,10 @@ export default function Luna() {
       <section className="section">
         <div className="container">
           <h2 className="text-center" style={{ marginBottom: '3rem' }}>What Luna Offers</h2>
+
+          <p style={{ fontSize: '1.25rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem' }}>
+            Luna isn't another task app. She's a proactive executive assistant who learns your preferences, anticipates your needs, and handles the boring stuff before you even ask.
+          </p>
 
           <div className="grid-2" style={{ marginBottom: '4rem' }}>
             <div>
@@ -128,14 +132,14 @@ export default function Luna() {
                  <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center' }}>
                     <span style={{ color: '#28a745', marginRight: '0.5rem' }}>✓</span> Travel & Research
                 </li>
-                 <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center' }}>
-                    <span style={{ color: '#28a745', marginRight: '0.5rem' }}>✓</span> Trained personally by Nina Christina
-                </li>
               </ul>
 
               <Link href="/#contact" className="btn btn-lg" style={{ width: '100%', backgroundColor: '#1565c0' }}>
                 Book Your Free Onboarding
               </Link>
+              <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666' }}>
+                Trained by Nina—not a generic chatbot reading from a script.
+              </p>
             </div>
           </div>
         </div>
