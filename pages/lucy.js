@@ -22,9 +22,9 @@ export default function Lucy() {
   return (
     <Layout
       title="Lucy - Social Media & Client Management | Flawless Productions"
-      description="Professional social media management and client coordination. Instagram optimization, content strategy, DM management, and client relationship tracking. From $500/month."
-      ogTitle="Lucy - Social Media & Client Management Specialist"
-      ogDescription="Your dedicated social media manager. Instagram setup, meta strategy, 12 professional images/month, DM management, client file tracking. $500 first month."
+      description="Social Media & Client Management—Actually Done Right. Content that converts, DMs that don't pile up. No fluff."
+      ogTitle="Lucy - Social Media & Client Management—Actually Done Right"
+      ogDescription="Social Media & Client Management—Actually Done Right. Content that converts, DMs that don't pile up. No fluff."
       ogImage="https://flawlessprod.com/images/lucy-og.jpg"
       schema={schema}
       canonicalUrl="https://flawlessprod.com/lucy"
@@ -34,9 +34,9 @@ export default function Lucy() {
         <div className="container grid-2" style={{ alignItems: 'center' }}>
           <div>
             <h1 style={{ color: '#d81b60', marginBottom: '1rem' }}>Lucy</h1>
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Social Media & Client Management Specialist</h2>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Social Media & Client Management—Actually Done Right</h2>
             <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
-              Your dedicated social media manager and client relationship expert.
+              You're posting randomly and calling it "strategy." Lucy fixes that. Content that converts, DMs that don't pile up, clients that don't slip through the cracks.
             </p>
             <Link href="#pricing" className="btn btn-lg" style={{ backgroundColor: '#d81b60' }}>
               View Pricing
@@ -59,7 +59,7 @@ export default function Lucy() {
             <div>
               <h3 style={{ color: '#d81b60', marginBottom: '1rem' }}>Social Media Management</h3>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                <li>Instagram profile setup & optimization (aesthetics, tone, engagement)</li>
+                <li>Instagram that doesn't look like you threw it together on a Tuesday at 3 AM</li>
                 <li>Niche identification and content strategy</li>
                 <li>Meta angle development (your business + current trends)</li>
                 <li>3-5 professional posts per week</li>
@@ -102,16 +102,26 @@ export default function Lucy() {
           {/* Meta Strategy */}
           <div className="card bg-alt" style={{ padding: '2rem', marginBottom: '4rem', borderLeft: '4px solid #d81b60' }}>
             <h3 style={{ color: '#d81b60', marginBottom: '1rem' }}>Lucy's Meta Strategy Expertise</h3>
+            <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
+              Here's the problem: you're posting about your product. Nobody cares about your product.
+            </p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
+              They care about their problems.
+            </p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
+              Lucy finds the intersection between what you sell, what's trending, and what your audience is scared of or obsessed with. That's the "meta."
+            </p>
+            <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
+              <strong>Example:</strong> You sell cybersecurity. Everyone's freaking out about AI hacks. Lucy's post: "Worried AI is coming for your data? Here's how we're stopping it."
+            </p>
             <p style={{ fontSize: '1.1rem' }}>
-              Lucy excels at finding your "meta" - the intersection between your business, what people are talking about right now, and what your audience needs.
-              For example: <em>Cybersecurity business + AI concerns = "Worried about AI security risks? We've got you covered."</em>
-              Lucy identifies trends, fears, and needs in your industry and creates relatable, engaging content.
+              That's content that converts. Not "Check out our new firewall features."
             </p>
           </div>
 
           {/* Pricing */}
           <div id="pricing" className="text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 style={{ marginBottom: '2rem' }}>Pricing & What's Included</h2>
+            <h2 style={{ marginBottom: '2rem' }}>What It Costs (And What You Get)</h2>
             <div className="card" style={{ padding: '3rem', border: '2px solid #d81b60', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: '20px', right: '-30px', transform: 'rotate(45deg)', background: '#d81b60', color: 'white', padding: '0.5rem 3rem', fontWeight: 'bold' }}>
                 SPECIAL
@@ -121,7 +131,7 @@ export default function Lucy() {
                 $1,000<span style={{ fontSize: '1rem', color: '#666', fontWeight: 'normal' }}>/month</span>
               </div>
               <div style={{ fontSize: '1.5rem', color: '#28a745', fontWeight: 'bold', marginBottom: '2rem' }}>
-                First Month: $500 (50% OFF)
+                First month? $500. Try it, keep it, scale it.
               </div>
 
               <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0, margin: '0 auto 2rem', maxWidth: '400px' }}>
@@ -149,7 +159,7 @@ export default function Lucy() {
                 Book Your Free Onboarding
               </Link>
               <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666' }}>
-                Managed by Nina Christina - 10 years digital marketing experience
+                Managed directly by Nina—not outsourced to some random VA in a Facebook group.
               </p>
             </div>
           </div>
