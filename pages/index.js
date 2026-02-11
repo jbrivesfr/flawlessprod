@@ -10,7 +10,7 @@ export default function Home() {
     "name": "Flawless Productions",
     "url": "https://flawlessprod.com",
     "logo": "https://flawlessprod.com/images/logo.png",
-    "description": "Stop Drowning in Busywork. Get a virtual team that actually works. No fluff, no training, no bullshit. Just results.",
+    "description": "Enhanced agent services for modern business",
     "founders": [
       {
         "@type": "Person",
@@ -25,10 +25,10 @@ export default function Home() {
 
   return (
     <Layout
-      title="Flawless Productions - Stop Drowning in Busywork"
-      description="Stop Drowning in Busywork. Get a virtual team that actually works. No fluff, no training, no bullshit. Just results."
-      ogTitle="Flawless Productions - Stop Drowning in Busywork"
-      ogDescription="Stop Drowning in Busywork. Get a virtual team that actually works. No fluff, no training, no bullshit. Just results."
+      title="Flawless Productions - Enhanced Agents for Modern Business"
+      description="Professional virtual assistant services with Lucy and Luna. Social media management, client coordination, and executive support. Human-trained enhanced agents available 8 AM - 8 PM."
+      ogTitle="Flawless Productions - Enhanced Agents for Modern Business"
+      ogDescription="Professional virtual assistant services with Lucy and Luna. Human-trained enhanced agents available 8 AM - 8 PM."
       ogImage="https://flawlessprod.com/images/logo.png"
       schema={schema}
       canonicalUrl="https://flawlessprod.com/"
@@ -38,10 +38,10 @@ export default function Home() {
         <div className="container grid-2" style={{ alignItems: 'center' }}>
           <div>
             <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'var(--primary-dark)' }}>
-              Stop Drowning in Busywork
+              Enhanced Agents for Modern Business
             </h1>
             <p style={{ fontSize: '1.5rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>
-              Get a virtual team that actually works. No fluff, no training, no bullshit. Just results.
+              Human-trained, professionally managed. Get 100x more done.
             </p>
             <Link href="/#contact" className="btn btn-lg">
               Book Free Consultation
@@ -60,13 +60,12 @@ export default function Home() {
         <div className="container text-center" style={{ maxWidth: '800px' }}>
           <h2 style={{ marginBottom: '2rem' }}>The Power of Enhanced Agents</h2>
           <p style={{ fontSize: '1.25rem', marginBottom: '1.5rem' }}>
-            You're paying people to do tasks AI should handle. We're the fix.
-          </p>
-          <p style={{ fontSize: '1.25rem', marginBottom: '1.5rem' }}>
-            Our "Enhanced Agents" are virtual teammates trained by real experts—available 8 AM to 8 PM, PST. They don't need handholding, sick days, or HR complaints.
+            We combine human expertise with advanced tools to create "Enhanced Agents".
+            Trained to be cooperative, secure, and productive, they serve as your virtual team,
+            available 8 AM - 8 PM.
           </p>
           <p style={{ fontSize: '1.25rem' }}>
-            Think AI meets human intelligence. No generic chatbots. No automation theater. Just work that gets done.
+            Not just automation - it's augmented teamwork.
           </p>
         </div>
       </section>
@@ -83,9 +82,7 @@ export default function Home() {
               </div>
               <h3>Lucy</h3>
               <p style={{ fontSize: '1.2rem', color: 'var(--primary-color)', marginBottom: '1rem' }}>Social Media & Client Management</p>
-              <p style={{ marginBottom: '2rem' }}>
-                Your Instagram isn't growing because you're posting randomly and hoping for likes. Lucy fixes that. Strategy, posting, DMs, client tracking—handled. You focus on business, she handles the noise.
-              </p>
+              <p style={{ marginBottom: '2rem' }}>Your dedicated social media manager. Instagram setup, content strategy, and client relationship tracking.</p>
               <Link href="/lucy" className="btn btn-lg">Meet Lucy</Link>
             </div>
 
@@ -96,14 +93,12 @@ export default function Home() {
               </div>
               <h3>Luna</h3>
               <p style={{ fontSize: '1.2rem', color: 'var(--primary-color)', marginBottom: '1rem' }}>Virtual Assistant & Scheduling</p>
-              <p style={{ marginBottom: '2rem' }}>
-                Stop forgetting meetings, missing deadlines, and responding to emails at 11 PM. Luna manages your calendar, tracks your tasks, and keeps you sane. She's the EA you can't afford to hire full-time.
-              </p>
+              <p style={{ marginBottom: '2rem' }}>Your personal assistant for calendar management, task coordination, and executive support.</p>
               <Link href="/luna" className="btn btn-lg">Meet Luna</Link>
             </div>
           </div>
           <p className="text-center" style={{ marginTop: '2rem', fontStyle: 'italic', color: 'var(--text-muted)' }}>
-            Need something custom? We build agents for specialized workflows. Ask.
+            Custom solutions also available.
           </p>
         </div>
       </section>
@@ -115,15 +110,15 @@ export default function Home() {
           <div className="grid" style={{ gap: '2rem' }}>
             <div className="card" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
               <h3 style={{ color: 'var(--primary-color)' }}>Professionally Trained</h3>
-              <p>Trained by people who've actually done the job. Not generic AI. Not offshore contractors reading scripts. Real expertise, digitized.</p>
+              <p>Our agents are virtual team members trained by industry experts to handle specific business functions with precision.</p>
             </div>
             <div className="card" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
               <h3 style={{ color: 'var(--primary-color)' }}>Human Oversight</h3>
-              <p>Every agent reports to real humans. When something needs judgment, you get it. When something needs automation, you get that too. Best of both.</p>
+              <p>Every enhanced agent is supervised by real people. We combine human judgment with digital efficiency.</p>
             </div>
             <div className="card" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
               <h3 style={{ color: 'var(--primary-color)' }}>Secure & Reliable</h3>
-              <p>Your data stays private. Your workflows stay reliable. No offshore mystery teams, no data leaks, no amateur hour.</p>
+              <p>Built for business, our agents operate within secure parameters to ensure data privacy and reliable execution.</p>
             </div>
           </div>
         </div>
@@ -137,7 +132,7 @@ export default function Home() {
             <TeamMember
               name="Nina Christina"
               role="Founder & Agency Manager"
-              bio="Nina built a 20K+ YouTube following teaching social media strategy—then realized she could train AI to do it better. 10+ years as a VA and digital marketer. Now she's training enhanced agents instead of hiring expensive humans."
+              bio="Former virtual assistant and English teacher turned business influencer. Built a 20K+ YouTube following teaching social media strategy. Now training enhanced agents with 10+ years experience."
               image="/images/team/nina.jpg"
               links={[
                 { label: 'YouTube', url: 'https://youtube.com/@FlawlessChristina' },
@@ -148,7 +143,7 @@ export default function Home() {
             <TeamMember
               name="JB Reeves"
               role="Technical Director"
-              bio="15+ years building digital systems that don't break. Handles the technical backbone so you don't have to care how it works—you just care that it does."
+              bio="French web designer and developer from Paris. 15+ years building digital solutions. Handles technical infrastructure and system design for Flawless Productions."
               image="/images/team/jb.jpg"
               links={[
                 { label: 'LinkedIn', url: '#' },
@@ -158,13 +153,13 @@ export default function Home() {
             <TeamMember
               name="Shaun"
               role="Support & Operations"
-              bio="Makes sure nothing falls through the cracks. Support, ops, coordination—Shaun's the glue keeping everything running."
+              bio="Dedicated to ensuring smooth operations and client satisfaction. Handles support queries and coordinates team logistics."
               image="/images/team/shaun.jpg"
               links={[]}
             />
           </div>
           <p className="text-center" style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-            Real company. Real team. Real accountability.
+            Backed by shareholders and a professional team structure.
           </p>
         </div>
       </section>
@@ -172,9 +167,9 @@ export default function Home() {
       {/* CTA Section */}
       <section id="contact" className="section" style={{ backgroundColor: 'var(--primary-color)', color: 'white', textAlign: 'center' }}>
         <div className="container">
-          <h2 style={{ color: 'white', marginBottom: '1.5rem' }}>Stop doing $10/hour work when you should be closing deals.</h2>
+          <h2 style={{ color: 'white', marginBottom: '1.5rem' }}>Ready to Scale Your Business?</h2>
           <p style={{ marginBottom: '2rem', fontSize: '1.25rem', opacity: 0.9 }}>
-            Book a free consultation. We'll show you exactly what you're wasting time on—and how to fix it.
+            Book a free consultation to see how enhanced agents can transform your workflow.
           </p>
           <div style={{ background: 'white', padding: '2rem', borderRadius: '8px', maxWidth: '500px', margin: '0 auto', color: 'var(--text-color)' }}>
             <h3 style={{ marginBottom: '1rem' }}>Contact Us</h3>
@@ -192,7 +187,7 @@ export default function Home() {
                 <button type="submit" className="btn" style={{ width: '100%' }}>Book Consultation (WhatsApp)</button>
             </form>
             <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                We'll send you our WhatsApp after you book. Real humans respond.
+                WhatsApp contact provided after booking.
             </p>
           </div>
         </div>

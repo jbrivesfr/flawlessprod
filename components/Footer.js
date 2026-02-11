@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid-2">
           <div>
             <h3>Flawless Productions</h3>
-            <p>Virtual teams that actually work.</p>
+            <p>Enhanced Agents for Modern Business.</p>
           </div>
           <div>
             <h4>Links</h4>
