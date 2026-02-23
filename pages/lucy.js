@@ -29,29 +29,58 @@ export default function Lucy() {
       schema={schema}
       canonicalUrl="https://flawlessprod.com/lucy"
     >
-      {/* Hero Section */}
-      <section className="hero" style={{ background: 'linear-gradient(135deg, #fce4ec 0%, #ffffff 100%)' }}>
-        <div className="container grid-2" style={{ alignItems: 'center' }}>
-          <div>
-            <h1 style={{ color: '#d81b60', marginBottom: '1rem' }}>Lucy</h1>
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>Social Media & Client Management Specialist</h2>
-            <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
-              Your dedicated social media manager and client relationship expert.
-            </p>
-            <Link href="#pricing" className="btn btn-lg" style={{ backgroundColor: '#d81b60' }}>
+      {/* Hero Section - Full Width Video Banner */}
+      <section style={{ position: 'relative', width: '100%', height: '100vh', minHeight: '600px', overflow: 'hidden' }}>
+        {/* Vimeo Background Video */}
+        <iframe
+          src="https://player.vimeo.com/video/1167226262?autoplay=1&muted=1&loop=1&background=1"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '177.78vh',
+            minWidth: '100%',
+            height: '56.25vw',
+            minHeight: '100%',
+            transform: 'translate(-50%, -50%)',
+            border: 0,
+            pointerEvents: 'none',
+          }}
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="Lucy - Flawless Productions"
+        />
+        {/* Dark Overlay */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(0, 0, 0, 0.55)',
+        }} />
+        {/* Content on top */}
+        <div style={{
+          position: 'relative',
+          zIndex: 2,
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          padding: '0 2rem',
+        }}>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>Flawless Productions</p>
+          <h1 style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: 'white', marginBottom: '1rem', fontWeight: 800 }}>
+            Lucy
+          </h1>
+          <h2 style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', fontWeight: 400 }}>
+            Social Media & Client Management Specialist
+          </h2>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Link href="#pricing" className="btn btn-lg" style={{ backgroundColor: '#d81b60', color: 'white', fontWeight: 700 }}>
               View Pricing
             </Link>
-          </div>
-          <div className="flex-center">
-            <div style={{ width: '100%', borderRadius: '12px', overflow: 'hidden', position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-              <iframe
-                src="https://player.vimeo.com/video/1167226262?autoplay=1&muted=1&loop=1&background=1"
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="Lucy - Flawless Productions"
-              />
-            </div>
+            <Link href="/#contact" className="btn btn-lg" style={{ backgroundColor: 'transparent', color: 'white', border: '2px solid white' }}>
+              Book Free Consultation
+            </Link>
           </div>
         </div>
       </section>
