@@ -43,8 +43,14 @@ export default function Lucy() {
             </Link>
           </div>
           <div className="flex-center">
-            <div style={{ width: '100%', height: '400px', backgroundColor: '#fce4ec', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid #d81b60' }}>
-               <span style={{ color: '#d81b60', fontSize: '1.5rem' }}>Lucy Placeholder</span>
+            <div style={{ width: '100%', borderRadius: '12px', overflow: 'hidden', position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+              <iframe
+                src="https://player.vimeo.com/video/1167226262?autoplay=1&muted=1&loop=1&background=1"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Lucy - Flawless Productions"
+              />
             </div>
           </div>
         </div>
