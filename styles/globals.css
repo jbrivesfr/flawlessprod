@@ -171,3 +171,76 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background-color: #25D366 !important;
+  color: white !important;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20ba5a !important;
+}
+
+/* FAQ Accordion Styles */
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: white;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+  color: var(--text-color);
+}
+
+.faq-question:hover {
+  background-color: var(--background-alt);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-muted);
+}

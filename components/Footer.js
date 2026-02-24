@@ -7,20 +7,21 @@ export default function Footer() {
         <div className="grid-2">
           <div>
             <h3>Flawless Productions</h3>
-            <p>Enhanced Agents for Modern Business.</p>
+            <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>Virtual teams that actually work.</p>
           </div>
           <div>
             <h4>Links</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li><Link href="/" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Home</Link></li>
-              <li><Link href="/lucy" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Lucy</Link></li>
-              <li><Link href="/luna" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Luna</Link></li>
-              <li><Link href="/#contact" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Contact</Link></li>
+              <li><Link href="/#features" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Features</Link></li>
+              <li><Link href="/#how-it-works" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>How It Works</Link></li>
+              <li><Link href="/#faq" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>FAQ</Link></li>
+              <li><Link href="/privacy" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Privacy Policy</Link></li>
+              <li><Link href="/terms" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Terms of Service</Link></li>
             </ul>
           </div>
         </div>
         <div className="text-center" style={{ marginTop: '2rem', borderTop: '1px solid #eaeaea', paddingTop: '1rem', color: 'var(--text-muted)' }}>
-          <p>&copy; {new Date().getFullYear()} Flawless Productions. All rights reserved.</p>
+          <p>&copy; 2026 Flawless Productions. All rights reserved.</p>
         </div>
       </div>
     </footer>
