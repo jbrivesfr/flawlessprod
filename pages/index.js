@@ -13,7 +13,7 @@ export default function Home() {
   const faqs = [
     {
       question: "What exactly can Lucy do?",
-      answer: "Lucy handles social media management, content calendar creation, caption writing, DM management, client tracking, research, competitor analysis, and any general VA requests you send her way. If you're not sure whether she can handle something — just ask her."
+      answer: "Lucy handles social media management, content calendar creation, caption writing, DM management, client tracking, research, competitor analysis, and any general requests you send her way. If you're not sure whether she can handle something — just ask her."
     },
     {
       question: "How does it work technically?",
@@ -25,7 +25,7 @@ export default function Home() {
     },
     {
       question: "Is this actually AI or a real person?",
-      answer: "Both. Lucy is an Enhanced Agent — AI trained by real human experts (Nina's team). She combines AI speed and availability with human judgment and expertise. You get the best of both: always available like AI, sharp like a 10-year veteran VA."
+      answer: "Both. Lucy is an Enhanced Agent — AI trained by real human experts (Nina's team). She combines AI speed and availability with human judgment and expertise. You get the best of both: always available like AI, sharp like a 10-year veteran assistant."
     },
     {
       question: "What are your hours?",
@@ -51,7 +51,7 @@ export default function Home() {
     "name": "Flawless Productions",
     "url": "https://flawlessprod.com",
     "logo": "https://flawlessprod.com/images/logo.png",
-    "description": "Virtual assistant services with Lucy and Luna. Enhanced agents for modern business.",
+    "description": "Smart assistant services with Lucy and Luna. Enhanced agents for modern business.",
     "founders": [
       { "@type": "Person", "name": "Nina Christina" },
       { "@type": "Person", "name": "JB Reeves" }
@@ -60,9 +60,9 @@ export default function Home() {
 
   return (
     <Layout
-      title="Flawless Productions - The Side VA That Actually Gets Things Done"
+      title="Flawless Productions - The Smart Assistant That Actually Gets Things Done"
       description="Lucy manages your social media, handles your requests, and keeps your content calendar running — all from WhatsApp. No app. No login. No waiting."
-      ogTitle="The Side VA That Actually Gets Things Done"
+      ogTitle="The Smart Assistant That Actually Gets Things Done"
       ogDescription="Your AI assistant, one WhatsApp away. Unlimited requests, always available."
       ogImage="https://flawlessprod.com/images/logo.png"
       schema={schema}
@@ -110,7 +110,7 @@ export default function Home() {
             Your AI assistant, one WhatsApp away
           </p>
           <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: 'white', marginBottom: '1.5rem', fontWeight: 800, lineHeight: 1.1 }}>
-            The side VA that actually gets things done
+            The smart assistant that actually gets things done
           </h1>
           <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.5 }}>
             Lucy manages your social media, handles your requests, and keeps your content calendar running — all from a single WhatsApp message. No app. No login. No waiting.
@@ -153,7 +153,7 @@ export default function Home() {
               That's not a strategy. That's survival mode.
             </p>
             <p style={{ fontWeight: 700, fontSize: '1.3rem' }}>
-              You need a VA in your corner. But not the $3K/month kind.
+              You need a smart assistant in your corner. But not the $3K/month kind.
             </p>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function Home() {
       <section className="section bg-alt">
         <div className="container" style={{ maxWidth: '900px' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h2 style={{ marginBottom: '1.5rem', fontSize: 'clamp(2rem, 4vw, 3rem)' }}>Meet Lucy — your always-on side VA</h2>
+            <h2 style={{ marginBottom: '1.5rem', fontSize: 'clamp(2rem, 4vw, 3rem)' }}>Meet Lucy — your always-on smart assistant</h2>
             <p style={{ fontSize: '1.15rem', lineHeight: '1.7', maxWidth: '700px', margin: '0 auto' }}>
               Lucy is an Enhanced Agent. Part AI, part human-trained expert. She's available when you wake up, when you're stuck in traffic, and when you finally have 5 minutes to think.
             </p>
@@ -377,7 +377,7 @@ export default function Home() {
             <TeamMember
               name="Nina Christina"
               role="Founder & Head of Training"
-              bio="Nina built a 20K+ YouTube following teaching social media strategy — then realized she could train AI to do it better. 10+ years as a VA and digital marketer. She personally trains and oversees every Enhanced Agent. Not outsourced. Not automated. Nina's fingerprints are on every interaction."
+              bio="Nina built a 20K+ YouTube following teaching social media strategy — then realized she could train AI to do it better. 10+ years as an assistant and digital marketer. She personally trains and oversees every Enhanced Agent. Not outsourced. Not automated. Nina's fingerprints are on every interaction."
               image="/images/team/nina.jpg"
               links={[
                 { label: 'YouTube', url: 'https://youtube.com/@FlawlessChristina' },

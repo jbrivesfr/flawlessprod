@@ -5,12 +5,12 @@ export default function Lucy() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Lucy - Social Media & VA Specialist",
+    "name": "Lucy - Social Media & Smart Assistant",
     "provider": {
       "@type": "Organization",
       "name": "Flawless Productions"
     },
-    "description": "Your side VA — always on, unlimited requests, right from your phone. Social media management and VA support via WhatsApp.",
+    "description": "Your smart assistant — always on, unlimited requests, right from your phone. Social media management and smart assistant support via WhatsApp.",
     "offers": {
       "@type": "Offer",
       "price": "1000",
@@ -21,9 +21,9 @@ export default function Lucy() {
 
   return (
     <Layout
-      title="Lucy - Your Social Media & VA Specialist | Flawless Productions"
-      description="Your side VA — always on, unlimited requests, right from your phone. Social media management, content calendar, client tracking. $1,000/month, first month $500."
-      ogTitle="Lucy - Your Social Media & VA Specialist"
+      title="Lucy - Your Social Media & Smart Assistant | Flawless Productions"
+      description="Your smart assistant — always on, unlimited requests, right from your phone. Social media management, content calendar, client tracking. $1,000/month, first month $500."
+      ogTitle="Lucy - Your Social Media & Smart Assistant"
       ogDescription="Always available, unlimited requests, right from your phone. Content calendar, social media management, client tracking via WhatsApp."
       ogImage="https://flawlessprod.com/images/lucy-og.jpg"
       schema={schema}
@@ -33,10 +33,10 @@ export default function Lucy() {
       <section className="hero" style={{ background: 'linear-gradient(135deg, #fce4ec 0%, #ffffff 100%)', padding: '6rem 0' }}>
         <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 500 }}>
-            Your Social Media & VA Specialist
+            Your Social Media & Smart Assistant
           </p>
           <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: '1.5rem', color: 'var(--primary-dark)' }}>
-            Your side VA — always on, unlimited requests, right from your phone
+            Your smart assistant — always on, unlimited requests, right from your phone
           </h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '700px', margin: '0 auto 2.5rem', lineHeight: '1.7', color: 'var(--text-muted)' }}>
             You're juggling too much and dropping things. Lucy is always available, handles whatever you throw at her, and keeps your social media running on autopilot — with a real content calendar.
@@ -53,7 +53,7 @@ export default function Lucy() {
           <h2 style={{ marginBottom: '2rem', fontSize: 'clamp(2rem, 4vw, 3rem)' }}>Here's what's actually broken.</h2>
           <div style={{ fontSize: '1.15rem', lineHeight: '1.8' }}>
             <p style={{ marginBottom: '1.5rem' }}>
-              You don't have a VA. Or your VA works 9-5. Or costs $3K/month and you're scared to message her on a Sunday.
+              You don't have a smart assistant. Or your smart assistant works 9-5. Or costs $3K/month and you're scared to message her on a Sunday.
             </p>
             <p style={{ marginBottom: '1.5rem' }}>
               Your Instagram goes dark for 3 weeks because life got busy. Your content is random. Your DMs pile up. You keep saying "I'll catch up this weekend" — and you don't.
@@ -318,7 +318,7 @@ export default function Lucy() {
                 Managed directly by Nina Christina
               </p>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-                10+ years digital marketing experience. Not outsourced. Not a random VA. Nina trains every agent personally.
+                10+ years digital marketing experience. Not outsourced. Not a random assistant. Nina trains every agent personally.
               </p>
             </div>
 

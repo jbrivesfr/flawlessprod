@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid-2">
           <div>
             <h3>Flawless Productions</h3>
-            <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>Virtual teams that actually work.</p>
+            <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>Smart teams that actually work.</p>
           </div>
           <div>
             <h4>Links</h4>

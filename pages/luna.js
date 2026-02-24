@@ -10,7 +10,7 @@ export default function Luna() {
       "@type": "Organization",
       "name": "Flawless Productions"
     },
-    "description": "Virtual assistant support that actually keeps up. Calendar management, email support, task coordination via WhatsApp.",
+    "description": "Smart assistant support that actually keeps up. Calendar management, email support, task coordination via WhatsApp.",
     "offers": {
       "@type": "Offer",
       "price": "1000",
@@ -22,7 +22,7 @@ export default function Luna() {
   return (
     <Layout
       title="Luna - Your Executive Assistant & Operations Specialist | Flawless Productions"
-      description="Virtual assistant support that actually keeps up. Calendar management, email support, task coordination. $1,000/month, first month $500."
+      description="Smart assistant support that actually keeps up. Calendar management, email support, task coordination. $1,000/month, first month $500."
       ogTitle="Luna - Your Executive Assistant & Operations Specialist"
       ogDescription="You're drowning in emails, double-booking meetings, and forgetting deadlines. Luna handles the chaos via WhatsApp."
       ogImage="https://flawlessprod.com/images/luna-og.jpg"
@@ -36,7 +36,7 @@ export default function Luna() {
             Your Executive Assistant & Operations Specialist
           </p>
           <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: '1.5rem', color: 'var(--primary-dark)' }}>
-            Virtual assistant support that actually keeps up
+            Smart assistant support that actually keeps up
           </h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '700px', margin: '0 auto 2.5rem', lineHeight: '1.7', color: 'var(--text-muted)' }}>
             You're drowning in emails, double-booking meetings, and forgetting deadlines. Luna handles the chaos so you can focus on the work that matters.
