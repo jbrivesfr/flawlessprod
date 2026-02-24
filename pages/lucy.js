@@ -109,6 +109,7 @@ export default function Lucy() {
               <li><strong>Always available</strong> — Ping her at 6 AM or 11 PM. She responds.</li>
               <li><strong>Unlimited requests</strong> — No hourly tracker. No "that's outside scope." Just done.</li>
               <li><strong>Content calendar on lock</strong> — Consistent posting, trends tracked, never scramble again.</li>
+              <li><strong>She learns</strong> — The longer you work together, the more she knows your voice, your brand, your audience. It gets better every week.</li>
             </ul>
           </div>
         </div>
@@ -174,17 +175,20 @@ export default function Lucy() {
             <p style={{ fontSize: '1.15rem', marginBottom: '1.5rem', lineHeight: '1.7' }}>
               Lucy lives where you are. WhatsApp her from the couch, the car, the gym. Whatever works.
             </p>
+            <p style={{ fontSize: '1.15rem', marginBottom: '1.5rem', lineHeight: '1.7' }}>
+              And the more you work together, the better she gets. Lucy learns your brand voice, your audience, your preferences — so every result feels more like <em>you</em> over time.
+            </p>
             <div className="card" style={{ padding: '2rem', backgroundColor: '#fce4ec' }}>
               <h4 style={{ marginBottom: '1rem' }}>Real examples:</h4>
               <ul style={{ fontSize: '1.05rem', lineHeight: '2', paddingLeft: '1.5rem' }}>
-                <li>Voice note: "I want to post about my new offer" → Lucy writes 3 caption options</li>
-                <li>Screenshot of a competitor post → Lucy gives you the counter-strategy + a better version</li>
-                <li>"I need 5 hooks for a reel about burnout" → done in minutes</li>
-                <li>Photo from your weekend → turned into an on-brand story sequence</li>
-                <li>"What should I post this week?" → full content plan, ready to review</li>
+                <li>Voice note: "I want to post about my new offer" → Lucy writes 3 caption options <em>in your voice</em></li>
+                <li>Screenshot of a competitor post → Lucy gives you the counter-strategy + a better, personalized version</li>
+                <li>"I need 5 hooks for a reel about burnout" → done in minutes, tailored to your niche</li>
+                <li>Photo from your weekend → turned into an on-brand story sequence she already knows fits you</li>
+                <li>"What should I post this week?" → full content plan built around your goals, not a generic template</li>
               </ul>
               <p style={{ marginTop: '1.5rem', fontSize: '1.1rem', fontWeight: 600 }}>
-                No dashboards to log into. No tools to update. Just send a message, get results.
+                No dashboards to log into. No tools to update. Just send a message, get results — personalized to you.
               </p>
             </div>
           </div>
@@ -284,7 +288,7 @@ export default function Lucy() {
               <div style={{ width: '80px', height: '80px', borderRadius: '50%', backgroundColor: '#d81b60', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', margin: '0 auto 1.5rem' }}>2</div>
               <h3 style={{ marginBottom: '1rem' }}>Quick onboarding</h3>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: 'var(--text-muted)' }}>
-                Lucy will ask you a few questions about your business, your brand voice, and your goals. Takes about 15 minutes over WhatsApp.
+                Lucy will ask you a few questions about your business, your brand voice, and your goals. This is how she personalizes everything from day one. Takes about 15 minutes over WhatsApp.
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>

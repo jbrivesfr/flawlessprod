@@ -68,7 +68,7 @@ export default function Home() {
             Flawless Productions
           </p>
           <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: 'white', marginBottom: '1.5rem', fontWeight: 800, lineHeight: 1.1 }}>
-            Your team of personal agents — always on, always working
+            Your team — always on, always working
           </h1>
           <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.5 }}>
             AI-powered agents trained by real experts. Available 24/7 via WhatsApp. No apps, no dashboards, no waiting. Just results.
