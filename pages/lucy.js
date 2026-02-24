@@ -1,7 +1,49 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Lucy() {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "What exactly can Lucy do?",
+      answer: "Lucy handles social media management, content calendar creation, caption writing, DM management, client tracking, research, competitor analysis, and any general requests you send her way. If you're not sure whether she can handle something — just ask her."
+    },
+    {
+      question: "How does it work technically?",
+      answer: "You get Lucy's WhatsApp number after subscribing. That's it. Message her like a real assistant. No app, no account, no onboarding calls. She responds and delivers results directly in the chat."
+    },
+    {
+      question: "What does \"unlimited requests\" actually mean?",
+      answer: "It means no hourly billing, no scope creep conversations, no extra charges for doing more. You pay a flat monthly fee and send as many requests as you need. The more you use Lucy, the more value you get."
+    },
+    {
+      question: "Is this actually AI or a real person?",
+      answer: "Both. Lucy is an Enhanced Agent — AI trained by real human experts (Nina's team). She combines AI speed and availability with human judgment and expertise. You get the best of both: always available like AI, sharp like a 10-year veteran assistant."
+    },
+    {
+      question: "What are your hours?",
+      answer: "Lucy is available extended hours — well beyond a typical 9-5. Early mornings, evenings, weekends. You're not locked into business hours. (Exact response windows depend on your plan.)"
+    },
+    {
+      question: "Is my data secure?",
+      answer: "Yes. Your conversations stay private. No data shared with third parties. No offshore mystery teams. Just your dedicated agent and our internal team."
+    },
+    {
+      question: "What does it cost?",
+      answer: "$1,000/month — unlimited requests, always available. First month is $500 (50% off) so you can see the difference before committing fully."
+    },
+    {
+      question: "Can I cancel anytime?",
+      answer: "Yes. No long-term contracts. Month-to-month."
+    }
+  ];
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -10,7 +52,7 @@ export default function Lucy() {
       "@type": "Organization",
       "name": "Flawless Productions"
     },
-    "description": "Your smart assistant — always on, unlimited requests, right from your phone. Social media management and smart assistant support via WhatsApp.",
+    "description": "Your personal agent — always on, unlimited requests, right from your phone. Social media management and smart assistant support via WhatsApp.",
     "offers": {
       "@type": "Offer",
       "price": "1000",
@@ -21,10 +63,10 @@ export default function Lucy() {
 
   return (
     <Layout
-      title="Lucy - Your Social Media & Smart Assistant | Flawless Productions"
-      description="Your smart assistant — always on, unlimited requests, right from your phone. Social media management, content calendar, client tracking. $1,000/month, first month $500."
-      ogTitle="Lucy - Your Social Media & Smart Assistant"
-      ogDescription="Always available, unlimited requests, right from your phone. Content calendar, social media management, client tracking via WhatsApp."
+      title="Lucy - Your Personal Agent | Flawless Productions"
+      description="Your personal agent — always on, unlimited requests, right from your phone. Social media management, content calendar, client tracking. $1,000/month, first month $500."
+      ogTitle="Lucy - Your Personal Agent"
+      ogDescription="Your personal agent, one WhatsApp away. Always available, unlimited requests, right from your phone."
       ogImage="https://flawlessprod.com/images/lucy-og.jpg"
       schema={schema}
       canonicalUrl="https://flawlessprod.com/lucy"
@@ -33,10 +75,10 @@ export default function Lucy() {
       <section className="hero" style={{ background: 'linear-gradient(135deg, #fce4ec 0%, #ffffff 100%)', padding: '6rem 0' }}>
         <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 500 }}>
-            Your Social Media & Smart Assistant
+            Your personal agent, one WhatsApp away
           </p>
           <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: '1.5rem', color: 'var(--primary-dark)' }}>
-            Your smart assistant — always on, unlimited requests, right from your phone
+            The smart assistant getting things done 24/7
           </h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '700px', margin: '0 auto 2.5rem', lineHeight: '1.7', color: 'var(--text-muted)' }}>
             You're juggling too much and dropping things. Lucy is always available, handles whatever you throw at her, and keeps your social media running on autopilot — with a real content calendar.
@@ -329,11 +371,55 @@ export default function Lucy() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="section">
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <h2 className="text-center" style={{ marginBottom: '3rem', fontSize: 'clamp(2rem, 4vw, 3rem)' }}>Frequently Asked Questions</h2>
+
+          <div className="faq-accordion">
+            {faqs.map((faq, index) => (
+              <div key={index} className="faq-item">
+                <button
+                  className="faq-question"
+                  onClick={() => toggleFaq(index)}
+                  aria-expanded={openFaq === index}
+                >
+                  <span>{faq.question}</span>
+                  <span className={`faq-icon ${openFaq === index ? 'open' : ''}`}>+</span>
+                </button>
+                <div className={`faq-answer ${openFaq === index ? 'open' : ''}`}>
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section" style={{ backgroundColor: '#d81b60', color: 'white', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '800px' }}>
+          <h2 style={{ color: 'white', marginBottom: '1rem', fontSize: 'clamp(2rem, 4vw, 3rem)' }}>Ready to get your time back?</h2>
+          <p style={{ marginBottom: '2rem', fontSize: '1.2rem', opacity: 0.9, lineHeight: '1.7' }}>
+            Stop doing $10/hour work when you should be closing deals.
+          </p>
+          <p style={{ marginBottom: '2.5rem', fontSize: '1.2rem', fontWeight: 600 }}>
+            Lucy is ready when you are.
+          </p>
+          <a href="https://wa.me/17096002875?text=Hi%20Lucy!" className="btn btn-lg btn-whatsapp" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.3rem' }}>
+            💬 WhatsApp Lucy Now
+          </a>
+          <p style={{ marginTop: '1.5rem', fontSize: '1rem', opacity: 0.85 }}>
+            First month 50% off — no contracts
+          </p>
+        </div>
+      </section>
+
       {/* Footer Navigation */}
       <div className="container" style={{ paddingBottom: '4rem', paddingTop: '2rem' }}>
-         <p className="text-center">
-            <Link href="/" style={{ marginRight: '1rem' }}>&larr; Back to Home</Link> | <Link href="/luna" style={{ marginLeft: '1rem' }}>Check out Luna &rarr;</Link>
-         </p>
+        <p className="text-center">
+          <Link href="/" style={{ marginRight: '1rem' }}>&larr; Back to Home</Link> | <Link href="/luna" style={{ marginLeft: '1rem' }}>Check out Luna &rarr;</Link>
+        </p>
       </div>
     </Layout>
   );
