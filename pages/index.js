@@ -5,33 +5,34 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { OFFERS } from '@/lib/offers';
 
-const STATS = [
-  { value: '40 of 86', label: 'AI businesses we analyzed were app “wrappers” or automation agencies: the two most crowded categories, and the hardest to verify.' },
-  { value: '≈ $1k/mo', label: 'Verified median revenue of small AI-built products (read straight from payment data). The stories online are 10–20× higher.' },
-  { value: '2 of 26', label: 'Apps on a viral “vibe-coded apps making money” list had verified revenue. The other claims were self-declared.' },
-  { value: '89%', label: 'Of 750 small-business owners surveyed say AI pays off — through scheduling, payroll and follow-ups, not robots.' },
+const PAINS = [
+  ['Everyone says AI saves hours.', 'Your week still looks exactly the same.'],
+  ['You tried a few tools.', 'A ChatGPT account, an app or two. Nothing stuck, nothing talks to anything else.'],
+  ['Things slip through the cracks.', 'Leads wait too long, follow-ups get forgotten, the same questions eat your day.'],
+  ['You feel your competitors moving faster.', 'And you can’t tell what’s real from hype — or find the time to test it.'],
+  ['Your client data is sensitive.', 'You can’t paste it into a chatbot and hope for the best.'],
 ];
 
-const WORKS = [
-  'Boring fixes: missed calls, lead response time, follow-ups, reviews',
-  'A monthly care plan with a report — not a resold tool',
-  'Local and private AI: clients pay when “nothing leaves the building”',
-  'Real expertise in a trade, turned into a simple system',
+const DO = [
+  'Fix the boring, costly problems: missed calls, slow follow-ups, admin, scattered know-how',
+  'Set it up on the tools you already use, and train your team',
+  'Keep it working every month, with a short report',
+  'Keep sensitive data on your own machines',
 ];
 
-const FAILS = [
-  '“Autonomous agents” sold to small businesses',
-  'Cold email and freelance marketplaces as the only channel',
-  'White-label tools resold without service: they churn',
-  'Unverifiable revenue screenshots and made-up ROI',
+const DONT = [
+  'Sell you “autonomous AI agents” or another subscription',
+  'Lock you into a platform you can’t leave',
+  'Promise ROI we can’t measure',
+  'Leave you alone with a tool nobody uses after week two',
 ];
 
-const STANCE = [
-  ['We don’t sell “AI agents”.', 'We fix one specific leak in your business, then keep it working.'],
-  ['Measured, not promised.', 'We record a baseline before we start and check the number again at 30 days.'],
+const VALUE = [
+  ['Done for you.', 'You don’t have to learn AI. We set it up, test it on your real work and hand it over ready to use.'],
+  ['Measured.', 'We agree on one number before we start — hours saved, response time, leads followed up — and check it at 30 days.'],
   ['Private by default.', 'Sensitive data stays on your machines. Cloud AI only where you say yes, in writing.'],
-  ['Done for you, owned by you.', 'We build on your accounts. Prompts, data and documentation are yours. No lock-in.'],
-  ['Honest AI.', 'When AI talks to your clients, it says it’s AI. Complaints drop when it does.'],
+  ['Yours.', 'Built on your accounts. Prompts, data and documentation belong to you. No lock-in.'],
+  ['Honest.', 'When AI talks to your clients, it says it’s AI. People trust it more when it does.'],
 ];
 
 const STEPS = [
@@ -77,10 +78,10 @@ export default function Home() {
 
   return (
     <Layout
-      title="Flawless Productions — Practical AI, Set Up For You, Measured, Private"
-      description="No AI-agent hype. We find where your business leaks time or money, build the fix on your own tools, measure it and keep it private. Take the free 1-minute diagnostic."
-      ogTitle="Flawless Productions — Practical AI, Set Up For You"
-      ogDescription="What actually works with AI in small business right now, five done-for-you offers, and a free diagnostic."
+      title="Flawless Productions — We Help Businesses Catch Up on AI Tools"
+      description="Falling behind on AI? We set up the AI tools that fix your boring, costly problems — done for you, measured, private. Take the free 1-minute diagnostic."
+      ogTitle="We help businesses catch up on AI tools"
+      ogDescription="Done-for-you AI setup for small businesses and professionals: measured, private, no hype. Free 1-minute diagnostic."
       ogImage="https://flawlessprod.com/images/logo.png"
       schema={schema}
       canonicalUrl="https://flawlessprod.com/"
@@ -100,55 +101,76 @@ export default function Home() {
         <div className="hero-video-overlay" />
         <div className="hero-video-content">
           <p className="hero-eyebrow">Flawless Productions</p>
-          <h1 className="hero-title">AI that fixes real problems. Set up for you, measured, private.</h1>
+          <h1 className="hero-title">We help businesses catch up on AI tools.</h1>
           <p className="hero-sub">
-            No “AI agent” hype. We find where your business leaks time or money, build the fix on your own tools, and keep it working.
+            You know AI could give you back hours every week. You just don’t have the time to figure out which tools, set them up and make them stick. We do it for you — on your tools, privately, with results you can measure.
           </p>
           <div className="hero-ctas">
-            <Link href="#diagnostic" className="btn btn-lg">Take the 1-minute diagnostic</Link>
+            <Link href="#diagnostic" className="btn btn-lg">Find what AI can fix for you</Link>
             <Link href="#offers" className="btn btn-lg btn-light">See the offers</Link>
           </div>
         </div>
       </section>
 
-      {/* Point of view */}
-      <section id="point-of-view" className="section">
+      {/* The problem */}
+      <section id="problem" className="section">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Our point of view</p>
-            <h2 className="section-title">Most AI businesses sell hype. The ones that work fix boring problems.</h2>
+            <p className="eyebrow">Sound familiar?</p>
+            <h2 className="section-title">You’re running a business, not an AI lab.</h2>
+            <p className="lead">New AI tools come out every week. You don’t have the hours to test them all — so you fall a little further behind, and the work keeps piling up.</p>
+          </div>
+          <div className="pains">
+            {PAINS.map(([t, d]) => (
+              <div key={t} className="pain">
+                <h3>{t}</h3>
+                <p>{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Value proposition */}
+      <section id="point-of-view" className="section bg-alt">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">What we bring</p>
+            <h2 className="section-title">Most AI businesses sell hype. We fix boring problems.</h2>
             <p className="lead">
-              We read 214 public discussions from founders and business owners published between May and October 2026 and kept 86 real AI businesses, across 13 categories. We weighted verified numbers over self-reported ones. Here is what we saw.
+              We help small businesses and professionals catch up on AI tools — without the learning curve. We find the one place your business loses the most time or money, set up the AI that fixes it, train your team and keep it working.
             </p>
           </div>
 
-          <div className="stats">
-            {STATS.map((s) => (
-              <div key={s.value} className="stat">
-                <p className="stat-value">{s.value}</p>
-                <p className="stat-label">{s.label}</p>
-              </div>
-            ))}
+          <div className="proof">
+            <div className="stat proof-stat">
+              <p className="stat-value">89%</p>
+              <p className="stat-label">Of 750 small-business owners surveyed say AI pays off — through scheduling, payroll and follow-ups, not robots.</p>
+            </div>
+            <p className="proof-text">
+              The gain is real. What’s missing is the time to set it up properly. <strong>That’s the part we take off your plate.</strong>
+            </p>
           </div>
 
           <div className="grid-2 pov-cols">
             <div className="card pov-card works">
-              <h3>What works</h3>
-              <ul className="checklist">{WORKS.map((w) => <li key={w}>{w}</li>)}</ul>
+              <h3>What we do for you</h3>
+              <ul className="checklist">{DO.map((w) => <li key={w}>{w}</li>)}</ul>
             </div>
             <div className="card pov-card fails">
-              <h3>What doesn’t</h3>
-              <ul className="crosslist">{FAILS.map((w) => <li key={w}>{w}</li>)}</ul>
+              <h3>What we won’t do</h3>
+              <ul className="crosslist">{DONT.map((w) => <li key={w}>{w}</li>)}</ul>
             </div>
           </div>
 
           <div className="stance">
-            <h3 className="stance-title">So here is our stance</h3>
-            <ol className="stance-list">
-              {STANCE.map(([t, d]) => (
+            <h3 className="stance-title">What you get when you work with us</h3>
+            <ul className="stance-list value-list">
+              {VALUE.map(([t, d]) => (
                 <li key={t}><strong>{t}</strong> {d}</li>
               ))}
-            </ol>
+            </ul>
+            <Link href="#diagnostic" className="btn btn-lg btn-light stance-cta">Get your free diagnostic</Link>
           </div>
         </div>
       </section>
@@ -158,8 +180,8 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">Offers</p>
-            <h2 className="section-title">Five ways we help. Each one fixes one leak.</h2>
-            <p className="lead">Fixed scope, fixed timeline, a written quote after the diagnostic. Every offer can continue with monthly care.</p>
+            <h2 className="section-title">Pick your problem. We set up the fix.</h2>
+            <p className="lead">Each offer solves one problem, with a fixed scope, a fixed timeline and a written quote before we start. Every one can continue with monthly care so it keeps working.</p>
           </div>
 
           <div className="offers">
@@ -169,10 +191,10 @@ export default function Home() {
                 <h3 className="offer-title">{o.title}</h3>
                 <p className="offer-tagline">{o.tagline}</p>
                 <dl className="offer-facts">
-                  <div><dt>For whom</dt><dd>{o.forWhom}</dd></div>
-                  <div><dt>The problem</dt><dd>{o.problem}</dd></div>
+                  <div><dt>This is for you if</dt><dd>{o.forWhom}</dd></div>
+                  <div><dt>What’s going on</dt><dd>{o.problem}</dd></div>
                 </dl>
-                <h4 className="offer-sub">What we deliver</h4>
+                <h4 className="offer-sub">What we set up for you</h4>
                 <ul className="checklist">{o.deliver.map((d) => <li key={d}>{d}</li>)}</ul>
                 <h4 className="offer-sub">How it runs</h4>
                 <ol className="timeline">
@@ -180,7 +202,7 @@ export default function Home() {
                     <li key={when}><span>{when}</span>{what}</li>
                   ))}
                 </ol>
-                <h4 className="offer-sub">Results to expect</h4>
+                <h4 className="offer-sub">What changes for you</h4>
                 <p className="offer-results">{o.results}</p>
                 <p className="offer-included"><strong>Included:</strong> {o.included.join(' · ')}</p>
                 <Link href="#diagnostic" className="btn offer-cta">Is this for me? Take the diagnostic</Link>

@@ -375,3 +375,21 @@ section[id] { scroll-margin-top: 72px; }
   .diag-form .btn { width: 100%; }
 }
 .hero-video { background: radial-gradient(ellipse at 30% 20%, #1d4f8a 0%, #0b1d33 60%, #060f1c 100%); }
+
+/* 2026-10-27 sales copy: problem + proof */
+.pains { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+.pain { background: var(--background-alt); border-radius: 10px; padding: 1.4rem; border-top: 4px solid #c0392b; }
+.pain h3 { font-size: 1.15rem; margin-bottom: 0.4rem; color: #1a1a1a; }
+.pain p { margin: 0; color: var(--text-muted); }
+.proof { display: grid; grid-template-columns: minmax(260px, 1fr) 1.4fr; gap: 2rem; align-items: center; margin-bottom: 2.5rem; }
+.proof-stat { background: #fff; }
+.proof-stat .stat-value { font-size: 3.2rem; }
+.proof-stat .stat-label { font-size: 1.1rem; }
+.proof-text { font-size: 1.35rem; line-height: 1.55; margin: 0; color: #1a1a1a; }
+.value-list { list-style: none; padding-left: 0; }
+.stance-cta { margin-top: 1.5rem; }
+@media (max-width: 768px) {
+  .proof { grid-template-columns: 1fr; gap: 1.25rem; }
+  .proof-text { font-size: 1.15rem; }
+  .pains { grid-template-columns: 1fr; }
+}

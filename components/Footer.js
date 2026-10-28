@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h4>Links</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li><Link href="/#point-of-view" className="footer-link">Our point of view</Link></li>
+              <li><Link href="/#point-of-view" className="footer-link">What we do</Link></li>
               <li><Link href="/#offers" className="footer-link">Offers</Link></li>
               <li><Link href="/#how-we-work" className="footer-link">How we work</Link></li>
               <li><Link href="/#faq" className="footer-link">FAQ</Link></li>
