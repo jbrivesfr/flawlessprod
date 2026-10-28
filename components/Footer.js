@@ -7,16 +7,16 @@ export default function Footer() {
         <div className="grid-2">
           <div>
             <h3>Flawless Productions</h3>
-            <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>Smart teams that actually work.</p>
+            <p style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>Practical AI, set up for you. Measured. Private.</p>
           </div>
           <div>
             <h4>Links</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li><Link href="/#features" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Features</Link></li>
-              <li><Link href="/#how-it-works" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>How It Works</Link></li>
-              <li><Link href="/#faq" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>FAQ</Link></li>
-              <li><Link href="/privacy" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Privacy Policy</Link></li>
-              <li><Link href="/terms" style={{ display: 'block', padding: '0.25rem 0', color: 'var(--text-color)' }}>Terms of Service</Link></li>
+              <li><Link href="/#point-of-view" className="footer-link">Our point of view</Link></li>
+              <li><Link href="/#offers" className="footer-link">Offers</Link></li>
+              <li><Link href="/#how-we-work" className="footer-link">How we work</Link></li>
+              <li><Link href="/#faq" className="footer-link">FAQ</Link></li>
+              <li><Link href="/diagnostic" className="footer-link">Free diagnostic</Link></li>
             </ul>
           </div>
         </div>

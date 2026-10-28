@@ -2,20 +2,17 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="header" style={{ borderBottom: '1px solid #eaeaea', position: 'sticky', top: 0, backgroundColor: 'white', zIndex: 1000 }}>
-      <div className="container flex" style={{ justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
-        <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary-color)' }}>Flawless Productions</span>
-        </Link>
-
-        <nav className="flex" style={{ gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
-          <Link href="/#features" style={{ color: 'var(--text-color)' }}>Features</Link>
-          <Link href="/#how-it-works" style={{ color: 'var(--text-color)' }}>How It Works</Link>
-          <Link href="/#team" style={{ color: 'var(--text-color)' }}>Meet the Team</Link>
-          <Link href="/#faq" style={{ color: 'var(--text-color)' }}>FAQ</Link>
-          <a href="https://wa.me/17096002875?text=Hi%20Lucy!" className="btn btn-whatsapp" style={{ padding: '0.5rem 1rem' }} target="_blank" rel="noopener noreferrer">
-            WhatsApp Lucy →
-          </a>
+    <header className="site-header">
+      <a href="#main" className="skip-link">Skip to content</a>
+      <div className="container site-header-inner">
+        <Link href="/" className="brand">Flawless Productions</Link>
+        <nav className="site-nav" aria-label="Main">
+          <Link href="/#point-of-view" className="nav-link">Our view</Link>
+          <Link href="/#offers" className="nav-link">Offers</Link>
+          <Link href="/#how-we-work" className="nav-link">How we work</Link>
+          <Link href="/#team" className="nav-link">Team</Link>
+          <Link href="/#faq" className="nav-link">FAQ</Link>
+          <Link href="/#diagnostic" className="btn nav-cta">Free diagnostic</Link>
         </nav>
       </div>
     </header>

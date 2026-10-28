@@ -29,7 +29,7 @@ export default function Layout({
       <div className="layout">
         <Header />
 
-        <main>
+        <main id="main">
           {children}
         </main>
 
