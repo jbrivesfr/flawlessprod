@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
+import ExpBackground from '@/components/ExpBackground';
 import Diagnostic from '@/components/Diagnostic';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { OFFERS } from '@/lib/offers';
 
 const PAINS = [
@@ -52,12 +52,6 @@ const FAQS = [
 ];
 
 export default function Home() {
-  // The Vimeo video is domain-restricted: only embed it on flawlessprod.com (previews get the plain dark banner).
-  const [showVideo, setShowVideo] = useState(false);
-  useEffect(() => {
-    setShowVideo(/(^|\.)flawlessprod\.com$/.test(window.location.hostname));
-  }, []);
-
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -65,10 +59,6 @@ export default function Home() {
     "url": "https://flawlessprod.com",
     "logo": "https://flawlessprod.com/images/logo.png",
     "description": "Flawless Productions sets up practical, measurable and private AI for small businesses and professionals: done-for-you setup, private company brain, lead follow-up, AI visibility and content.",
-    "founders": [
-      { "@type": "Person", "name": "Nina Christina" },
-      { "@type": "Person", "name": "JB Reeves" }
-    ],
     "makesOffer": OFFERS.map((o) => ({
       "@type": "Offer",
       "itemOffered": { "@type": "Service", "name": o.title, "description": o.tagline }
@@ -85,18 +75,9 @@ export default function Home() {
       schema={schema}
       canonicalUrl="https://flawlessprod.com/"
     >
-      {/* Hero — full-width video banner (brand) */}
+      {/* Hero — fond exponentiel (brand) */}
       <section className="hero-video">
-        {showVideo && (
-        <iframe
-          src="https://player.vimeo.com/video/1167226262?autoplay=1&muted=1&loop=1&background=1"
-          className="hero-video-frame"
-          allow="autoplay; fullscreen; picture-in-picture"
-          title="Flawless Productions background video"
-          aria-hidden="true"
-          tabIndex={-1}
-        />
-        )}
+        <ExpBackground />
         <div className="hero-video-overlay" />
         <div className="hero-video-content">
           <p className="hero-eyebrow">Flawless Productions</p>
