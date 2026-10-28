@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout';
-import TeamMember from '@/components/TeamMember';
 import Diagnostic from '@/components/Diagnostic';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -239,41 +238,6 @@ export default function Home() {
             <p className="lead">Four questions, the offer that fits, then a direct WhatsApp conversation with JB. Your answers are pre-filled.</p>
           </div>
           <Diagnostic />
-        </div>
-      </section>
-
-      {/* Team */}
-      <section id="team" className="section">
-        <div className="container">
-          <div className="section-head">
-            <p className="eyebrow">The team</p>
-            <h2 className="section-title">Real people behind every project</h2>
-            <p className="lead">Every project is scoped, built and supported by the same small team. Not outsourced.</p>
-          </div>
-
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-            <TeamMember
-              name="Nina Christina"
-              role="Founder · Training & Content"
-              bio="Nina built a 20K+ YouTube following teaching social media strategy. 10+ years as an assistant and digital marketer. She leads onboarding, training and content quality, and reviews every delivery."
-              links={[
-                { label: 'YouTube', url: 'https://youtube.com/@FlawlessChristina' },
-                { label: 'Instagram', url: 'https://instagram.com/reevesnina' }
-              ]}
-            />
-            <TeamMember
-              name="JB"
-              role="Technical Lead"
-              bio="15+ years building digital systems that don’t break. JB designs the private AI and automation setups, runs the diagnostics and answers you personally."
-              links={[]}
-            />
-            <TeamMember
-              name="Shaun"
-              role="Operations & Client Success"
-              bio="Makes sure nothing falls through the cracks. Support, monthly care and coordination — Shaun keeps every setup running."
-              links={[]}
-            />
-          </div>
         </div>
       </section>
 

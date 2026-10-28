@@ -10,7 +10,6 @@ export default function Header() {
           <Link href="/#point-of-view" className="nav-link">What we do</Link>
           <Link href="/#offers" className="nav-link">Offers</Link>
           <Link href="/#how-we-work" className="nav-link">How we work</Link>
-          <Link href="/#team" className="nav-link">Team</Link>
           <Link href="/#faq" className="nav-link">FAQ</Link>
           <Link href="/#diagnostic" className="btn nav-cta">Free diagnostic</Link>
         </nav>
