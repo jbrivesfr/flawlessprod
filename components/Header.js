@@ -7,11 +7,11 @@ export default function Header() {
       <div className="container site-header-inner">
         <Link href="/" className="brand">Flawless Productions</Link>
         <nav className="site-nav" aria-label="Main">
-          <Link href="/#point-of-view" className="nav-link">What we do</Link>
-          <Link href="/#offers" className="nav-link">Offers</Link>
+          <Link href="/#why" className="nav-link">Why we exist</Link>
+          <Link href="/#what-we-do" className="nav-link">What we do</Link>
           <Link href="/#how-we-work" className="nav-link">How we work</Link>
           <Link href="/#faq" className="nav-link">FAQ</Link>
-          <Link href="/#diagnostic" className="btn nav-cta">Free diagnostic</Link>
+          <Link href="/ai-score" className="btn nav-cta">Get your AI Score</Link>
         </nav>
       </div>
     </header>

@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import CustomHead from './Head';
+import WhatsAppFloat from './WhatsAppFloat';
 
 export default function Layout({
   children,
@@ -11,7 +12,8 @@ export default function Layout({
   ogImage,
   ogType,
   schema,
-  canonicalUrl
+  canonicalUrl,
+  hideFloat = false
 }) {
   return (
     <>
@@ -34,6 +36,7 @@ export default function Layout({
         </main>
 
         <Footer />
+        {!hideFloat && <WhatsAppFloat />}
       </div>
     </>
   );

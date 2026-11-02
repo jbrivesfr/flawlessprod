@@ -83,7 +83,7 @@ export default function Diagnostic() {
       'Hi JB 👋 I’m coming from flawlessprod.com (diagnostic).',
       '',
       summary,
-      fit ? `• Suggested: ${fit.offer.title}${fit.privateNote ? ' (private setup)' : ''}` : '',
+      fit ? `• What we’d likely do: ${fit.offer.what}${fit.privateNote ? ' (private setup)' : ''}` : '',
       '',
       'I’d like to talk about it.',
     ];
@@ -104,8 +104,8 @@ export default function Diagnostic() {
       return;
     }
     setErr('');
-    const suggested = `${fit.offer.title}${fit.privateNote ? ' (private setup)' : ''}`;
-    const message = `Diagnostic flawlessprod.com\n${summary}\n• Suggested: ${suggested}`;
+    const suggested = `${fit.offer.what}${fit.privateNote ? ' (private setup)' : ''}`;
+    const message = `Diagnostic flawlessprod.com\n${summary}\n• What we’d likely do: ${suggested}`;
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -171,7 +171,7 @@ export default function Diagnostic() {
         <div aria-live="polite">
           <p className="eyebrow">Your result</p>
           <h3 ref={headingRef} tabIndex={-1} className="diag-q">
-            Likely fit: {fit.offer.title}
+            What we’d likely do for you: {fit.offer.what}
             {fit.privateNote && <span className="diag-private"> — on a private, local-first setup</span>}
           </h3>
           <p className="diag-text">{fit.offer.tagline} We confirm it together in a short call — sometimes the real fix is smaller than you think.</p>
