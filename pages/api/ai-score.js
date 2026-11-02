@@ -50,7 +50,7 @@ export default async function handler(req, res) {
   const pick = (q) => q.options.find((o) => o.short === answers[q.id]);
   // "Problem" = the answers that point strongly at a pain (2+ points somewhere).
   const pains = QUESTIONS.filter((q) => q.id !== 'goal' && Object.values(pick(q).pts || {}).some((v) => v >= 2))
-    .map((q) => pick(q).label);
+    .map((q) => `${q.q} → ${pick(q).label}`);
   const base = {
     site: 'flawlessprod.com',
     lang: 'en',
