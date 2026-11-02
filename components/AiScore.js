@@ -1,19 +1,22 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { QUESTIONS, computeScore, fmtGain, scoreMessage, waLink } from '@/lib/aiScore';
+import { QUESTIONS, computeScore, fmtGain, scoreMessage, jeanLink } from '@/lib/aiScore';
 
-// One question per screen, progress bar, result + WhatsApp to JB pre-filled with the score.
-// Only an anonymous record is logged (answers + score, no name, no contact).
+// One question per screen, progress bar, result + short code FAS-XXXX and WhatsApp to Jean
+// (JB's AI assistant) pre-filled with the score, top 3 and code. The answers are stored
+// (no name, no contact) so Jean can read them from the code.
 export default function AiScore() {
   const [answers, setAnswers] = useState({});
   const [step, setStep] = useState(0);
   const headingRef = useRef(null);
   const started = useRef(false);
   const logged = useRef(false);
+  const [code, setCode] = useState(null);
+  const [saving, setSaving] = useState(false);
 
   const done = step >= QUESTIONS.length;
   const current = QUESTIONS[step];
   const result = useMemo(() => (done ? computeScore(answers) : null), [done, answers]);
-  const wa = result ? waLink(scoreMessage(result)) : '';
+  const wa = result ? jeanLink(scoreMessage(result, code)) : '';
   const pct = Math.round((Math.min(step, QUESTIONS.length) / QUESTIONS.length) * 100);
 
   // Move focus to the new question for keyboard and screen-reader users.
@@ -24,11 +27,16 @@ export default function AiScore() {
   useEffect(() => {
     if (!result || logged.current) return;
     logged.current = true;
+    setSaving(true);
     fetch('/api/ai-score', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ answers, score: result.score, top: result.top.map((a) => a.id) }),
-    }).catch(() => {});
+      body: JSON.stringify({ answers }),
+    })
+      .then((r) => r.json())
+      .then((j) => j.ok && setCode(j.code))
+      .catch(() => {})
+      .finally(() => setSaving(false));
   }, [result, answers]);
 
   function choose(value) {
@@ -40,6 +48,7 @@ export default function AiScore() {
   function reset() {
     setAnswers({});
     setStep(0);
+    setCode(null);
     logged.current = false;
   }
 
@@ -94,11 +103,26 @@ export default function AiScore() {
             ))}
           </ol>
 
-          <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-lg btn-whatsapp score-cta">
-            Talk to JB on WhatsApp
+          <p className="score-code">
+            Your code: <strong>{code || (saving ? '…' : '—')}</strong>
+            <span>It’s already in the WhatsApp message, nothing to copy.</span>
+          </p>
+
+          <a
+            href={wa}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-lg btn-whatsapp score-cta"
+            aria-disabled={saving}
+            style={saving ? { pointerEvents: 'none', opacity: 0.6 } : undefined}
+          >
+            Chat with Jean on WhatsApp
           </a>
           <p className="diag-note">
-            Opens WhatsApp with your score and top 3 pre-filled. JB replies personally, in English or French.
+            Jean is JB’s AI assistant: he sets up the call with JB, in English or French.
+          </p>
+          <p className="diag-note">
+            Your answers are shared with Jean, JB’s assistant, only to prepare the conversation.
             Estimates are cautious ranges, not promises — we measure the real number with you.
           </p>
           <button type="button" className="link-btn" onClick={reset}>Retake the AI Score</button>

@@ -435,6 +435,9 @@ section[id] { scroll-margin-top: 72px; }
 .score-top p { margin: 0; color: var(--text-muted); font-size: 0.98rem; }
 .score-top .score-gain { margin-top: 0.4rem; color: var(--accent-color); font-weight: 700; font-size: 0.92rem; }
 .score-cta { display: block; text-align: center; }
+.score-code { background: var(--background-alt); border-radius: 10px; padding: 0.8rem 1rem; margin: 0 0 1rem; color: var(--text-muted); }
+.score-code strong { font-family: ui-monospace, Menlo, monospace; letter-spacing: 0.06em; color: #1a1a1a; font-size: 1.05rem; }
+.score-code span { display: block; font-size: 0.85rem; margin-top: 0.2rem; }
 @media (prefers-reduced-motion: no-preference) { .score-screen { animation: score-in 0.25s ease-out; } }
 @keyframes score-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
