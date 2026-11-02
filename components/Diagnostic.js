@@ -3,7 +3,7 @@ import { OFFER_BY_ID } from '@/lib/offers';
 
 // Same contact flow as jbrives.com: a few questions, first name,
 // email alert (Web3Forms) + server log (/api/contact), then WhatsApp to JB pre-filled.
-const JB_WA = '14154906663';
+const JEAN_WA = '16192125285'; // Jean, JB's AI assistant (WhatsApp "Flawless Prod") — JB 2026-11-02
 const WEB3FORMS_KEY = '17dfd67d-fb00-4352-ae05-ef4e08ca135b';
 
 const STEPS = [
@@ -80,14 +80,14 @@ export default function Diagnostic() {
 
   const waLink = useMemo(() => {
     const lines = [
-      'Hi JB 👋 I’m coming from flawlessprod.com (diagnostic).',
+      'Hi Jean 👋 I’m coming from flawlessprod.com (diagnostic).',
       '',
       summary,
       fit ? `• What we’d likely do: ${fit.offer.what}${fit.privateNote ? ' (private setup)' : ''}` : '',
       '',
       'I’d like to talk about it.',
     ];
-    return `https://wa.me/${JB_WA}?text=${encodeURIComponent(lines.join('\n'))}`;
+    return `https://wa.me/${JEAN_WA}?text=${encodeURIComponent(lines.join('\n'))}`;
   }, [summary, fit]);
 
   function choose(id, value) {
@@ -202,12 +202,12 @@ export default function Diagnostic() {
                 aria-invalid={!!err}
                 aria-describedby={err ? 'diag-err' : 'diag-note'}
               />
-              <button type="submit" className="btn btn-lg btn-whatsapp">Message JB on WhatsApp</button>
+              <button type="submit" className="btn btn-lg btn-whatsapp">Chat with Jean on WhatsApp</button>
             </form>
           )}
           {err && <p id="diag-err" className="diag-err" role="alert">{err}</p>}
           <p id="diag-note" className="diag-note">
-            Your answers are sent to us and pre-filled in WhatsApp. JB replies personally, in English or French.
+            Your answers are sent to us and pre-filled in WhatsApp. Jean, our AI assistant, replies and sets up your call with JB, in English or French.
           </p>
           <button type="button" className="link-btn" onClick={reset}>Retake the diagnostic</button>
         </div>

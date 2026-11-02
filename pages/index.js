@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import ExpBackground from '@/components/ExpBackground';
 import Link from 'next/link';
-import { waLink } from '@/lib/aiScore';
+import { jeanLink } from '@/lib/aiScore';
 
 const WHAT_WE_DO = [
   ['A morning brief, every day', 'We send our clients one short message before they start: money in, new leads, today’s appointments and tasks. No more opening five apps to know where things stand.'],
@@ -41,7 +41,7 @@ const VALUE = [
 ];
 
 const STEPS = [
-  ['AI Score', '10 questions online, then a WhatsApp conversation with JB to find the real leak.'],
+  ['AI Score', '10 questions online, then a WhatsApp chat with Jean, our AI assistant, who sets up your call with JB.'],
   ['Fixed scope', 'A written scope, timeline and quote before anything starts. No hourly surprises.'],
   ['Build on real data', 'We build and test on your actual emails, leads and documents — not a demo.'],
   ['Handover', 'Training, documentation and a recorded walkthrough for your team.'],
@@ -58,7 +58,7 @@ const FAQS = [
   ['Do you work outside the US?', 'Yes. We work remotely, in English and French.'],
 ];
 
-const WA_HELLO = waLink('Hi JB, I’m coming from flawlessprod.com. Can we talk?');
+const WA_HELLO = jeanLink('Hi Jean, I’m coming from flawlessprod.com. I’d like to talk with JB.');
 
 export default function Home() {
   const schema = {
@@ -97,7 +97,7 @@ export default function Home() {
           </p>
           <div className="hero-ctas">
             <Link href="/ai-score" className="btn btn-lg">Get your AI Score — 2 min</Link>
-            <a href={WA_HELLO} target="_blank" rel="noopener noreferrer" className="btn btn-lg btn-light">Talk to JB on WhatsApp</a>
+            <a href={WA_HELLO} target="_blank" rel="noopener noreferrer" className="btn btn-lg btn-light">Chat with Jean on WhatsApp</a>
           </div>
         </div>
       </section>
@@ -211,7 +211,7 @@ export default function Home() {
           <p>10 questions, 2 minutes: your score out of 100 and the 3 things AI should do for you first. Or just say hello — JB replies personally.</p>
           <div className="hero-ctas">
             <Link href="/ai-score" className="btn btn-lg btn-light">Get your AI Score</Link>
-            <a href={WA_HELLO} target="_blank" rel="noopener noreferrer" className="btn btn-lg btn-whatsapp">Talk to JB on WhatsApp</a>
+            <a href={WA_HELLO} target="_blank" rel="noopener noreferrer" className="btn btn-lg btn-whatsapp">Chat with Jean on WhatsApp</a>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { waLink } from '@/lib/aiScore';
+import { jeanLink } from '@/lib/aiScore';
 
 export default function Footer() {
   return (
@@ -19,7 +19,7 @@ export default function Footer() {
               <li><Link href="/#faq" className="footer-link">FAQ</Link></li>
               <li><Link href="/ai-score" className="footer-link">AI Score (2 minutes)</Link></li>
               <li><Link href="/diagnostic" className="footer-link">Quick 4-question diagnostic</Link></li>
-              <li><a href={waLink('Hi JB, I’m coming from flawlessprod.com. Can we talk?')} target="_blank" rel="noopener noreferrer" className="footer-link">Message JB on WhatsApp</a></li>
+              <li><a href={jeanLink('Hi Jean, I’m coming from flawlessprod.com. I’d like to talk with JB.')} target="_blank" rel="noopener noreferrer" className="footer-link">Chat with Jean on WhatsApp</a></li>
             </ul>
           </div>
         </div>
